@@ -1,4 +1,4 @@
-package br.com.challenge.invoice.client;
+package br.com.challenge.invoice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
