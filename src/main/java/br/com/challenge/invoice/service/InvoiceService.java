@@ -25,7 +25,7 @@ public class InvoiceService implements IInvoiceService {
 
         var invoiceID = saveInvoice(invoiceId, fiscalId, name, email);
 
-       // bahamasInvoiceService.registerInvoice(invoiceId, fiscalId, name, email);
+        bahamasInvoiceService.registerInvoice(invoiceId, fiscalId, name, email);
         return invoiceID;
     }
 
@@ -44,6 +44,6 @@ public class InvoiceService implements IInvoiceService {
     public InvoiceDTO getInvoice(Long invoiceId) {
         return invoiceRepository.findById(invoiceId)
                 .map(invoice -> modelMapper.map(invoice, InvoiceDTO.class))
-                .orElseThrow(() -> new NotFoundException());
+                .orElseThrow(NotFoundException::new);
     }
 }
