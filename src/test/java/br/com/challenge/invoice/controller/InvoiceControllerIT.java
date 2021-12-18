@@ -74,7 +74,6 @@ class InvoiceControllerIT extends BaseIT {
         getMockMvc()
                 .perform(get("/store-bahamas-client/{id}", "1"))
                 .andExpect(status().isNotFound());
-        ;
     }
 
 }
